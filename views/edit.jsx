@@ -3,9 +3,9 @@ const Default = require('./layouts/default')
 
 function Edit ({bread, index}) {
     return (
-      <Default>
+        <Default>
         <h2>Edit a bread</h2>
-        <form action={`/breads/${index}?_method=PUT`} method="POST">
+        <form action={`/breads/${bread.id}?_method=PUT`} method="POST">
           <label htmlFor="name">Name</label>
           <input
             type="text"
@@ -34,6 +34,5 @@ function Edit ({bread, index}) {
       </Default>
     )
 }
-
 
 module.exports = Edit
